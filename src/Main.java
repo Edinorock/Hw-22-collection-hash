@@ -10,14 +10,14 @@ public class Main {
         Product fish = new Product("Рыба", 500, 2);
         Product salt = new Product("Соль", 50, 1);
 
-        // ProductList productList1 = new ProductList("Список продуктов №1");
-        // productList1.addProduct(salt, fish);
-        //  productList1.checkProduct("Соль");
-        //  productList1.removeProduct(fish);
+        ProductList productList1 = new ProductList("Список продуктов №1");
+        productList1.addProduct(salt, fish);
+        productList1.checkProduct("Соль");
+        productList1.removeProduct(fish);
         //  System.out.println(productList1);
 
-        //  Recipe recipe1 = new Recipe("Запеченная рыба", salt);
-        //  recipe1.addProductList(productList1);
+       // Recipe recipe1 = new Recipe("Запеченная рыба", salt);
+       // recipe1.addProductList(productList1);
         //  System.out.println(recipe1);
 
     }

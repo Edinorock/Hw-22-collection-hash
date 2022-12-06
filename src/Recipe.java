@@ -49,6 +49,24 @@ public class Recipe {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Recipe recipe = (Recipe) o;
+        if (Objects.equals(recipeName, recipe.recipeName)) {
+            throw new RuntimeException("Такой рецепт уже существует");
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(recipeName);
+    }
+
+    @Override
     public String toString() {
         return recipeName +
                 ", totalPrice=" + getTotalPrice() +
