@@ -49,11 +49,8 @@ public class Product {
             return false;
         }
         Product product = (Product) o;
-        if (Objects.equals(name, product.name)) {
-            throw new RuntimeException("Этот продукт уже есть в списке");
+        return Objects.equals (name, product.name);
         }
-        return false;
-    }
 
     public int hashCode() {
         return Objects.hash(name);
