@@ -55,11 +55,8 @@ public class Recipe {
             return false;
         }
         Recipe recipe = (Recipe) o;
-        if (Objects.equals(recipeName, recipe.recipeName)) {
-            throw new RuntimeException("Такой рецепт уже существует");
+        return Objects.equals(recipeName, recipe.recipeName);
         }
-        return false;
-    }
 
     @Override
     public int hashCode() {
